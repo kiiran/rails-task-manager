@@ -1,0 +1,12 @@
+<h1>Task list!</h1>
+<h3>Here are your tasks:</h3>
+<ul>
+  <% @tasks.each do |t| %>
+    <li><%= link_to t.name, task_path(id: t.id) %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Add a new task", new_task_path%>
+<%#= link_to "See all tasks", tasks_path%>
+<%#= link_to "Edit this task", tasks_path%>
+<%#= link_to "Delete this task", tasks_path%>
